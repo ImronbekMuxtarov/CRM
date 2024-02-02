@@ -19,5 +19,5 @@ public class ProductDTO {
 
     private Integer amount;
 
-    private Category category;
+    private CategoryDTO category;
 }
