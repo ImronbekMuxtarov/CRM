@@ -3,21 +3,24 @@ package org.example.crm.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
-
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Category {
+public class AcceptDocumentItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
+    @ManyToOne
+    private AcceptDocument document;
 
-//    @OneToMany
-//    private Set<Product> products;
+    @ManyToOne
+    private Product product;
+
+    private Float comePrice;
+
+    private Integer count;
 }

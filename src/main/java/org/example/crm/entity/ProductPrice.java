@@ -3,7 +3,7 @@ package org.example.crm.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
+import java.sql.Date;
 
 @Entity
 @AllArgsConstructor
@@ -11,13 +11,18 @@ import java.util.Set;
 @Getter
 @Setter
 @Builder
-public class Category {
+public class ProductPrice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
+    @ManyToOne
+    private Product product;
 
-//    @OneToMany
-//    private Set<Product> products;
+    private Float price;
+
+    @Column(columnDefinition = " date default now() ")
+    private Date date;
+
+    private Boolean status;
 }

@@ -5,5 +5,5 @@ import org.example.crm.entity.Product;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface ProductMapper extends MyMapper<ProductDTO, Product>{
+public interface ProductMapper{
 }

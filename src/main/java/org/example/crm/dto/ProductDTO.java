@@ -13,11 +13,9 @@ public class ProductDTO {
 
     private String name;
 
-    private Float price;
+    private CategoryDTO category;
 
-    private String unit;
+    private MeasurementDTO measurement;
 
     private Integer amount;
-
-    private CategoryDTO category;
 }

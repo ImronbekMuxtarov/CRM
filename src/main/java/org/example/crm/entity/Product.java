@@ -16,12 +16,11 @@ public class Product {
 
     private String name;
 
-    private Float price;
-
-    private String unit;
-
-    private Integer amount;
-
     @ManyToOne
     private Category category;
+
+    @ManyToOne
+    private Measurement measurement;
+
+    private Integer amount;
 }

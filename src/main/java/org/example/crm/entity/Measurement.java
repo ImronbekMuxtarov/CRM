@@ -1,9 +1,10 @@
 package org.example.crm.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.*;
-
-import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -11,13 +12,10 @@ import java.util.Set;
 @Getter
 @Setter
 @Builder
-public class Category {
+public class Measurement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
-
-//    @OneToMany
-//    private Set<Product> products;
 }

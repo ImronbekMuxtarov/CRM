@@ -5,5 +5,5 @@ import org.example.crm.entity.Organization;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface OrganizationMapper extends MyMapper<OrganizationDTO, Organization>{
+public interface OrganizationMapper {
 }

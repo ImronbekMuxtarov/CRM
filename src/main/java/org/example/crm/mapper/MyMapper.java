@@ -2,10 +2,10 @@ package org.example.crm.mapper;
 
 import java.util.List;
 
-public interface MyMapper<D, E>{
-    D toDTO(E e);
+public interface MyMapper<RQ, RS, E>{
+    RS toDTO(E e);
 
-    List<D> toDTOs(List<E> es);
+    List<RS> toDTOs(List<E> es);
 
-    E toEntity(D d);
+    E toEntity(RQ d);
 }
